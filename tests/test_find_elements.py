@@ -1,7 +1,7 @@
 from selene import be, have
 from selene.support.shared import browser
 import os
-###
+##
 
 def test_send_document(open_browser):
     browser.open("https://demoqa.com/automation-practice-form")
@@ -19,7 +19,7 @@ def test_send_document(open_browser):
     browser.element('[id="subjectsInput"]').type("Hindi").press_enter()
     browser.element('[id="react-select-3-input"]').type("NCR").press_enter()
     browser.element('[id="react-select-4-input"]').type("Noida").press_enter()
-    browser.element('#uploadPicture').set_value(os.path.abspath(os.path.join(os.path.dirname(__file__), os.path.pardir, 'tests/1614256626_python_log.jpg')))
+    browser.element('#uploadPicture').set_value(os.path.abspath(os.path.join(os.path.dirname(__file__), os.path.pardir, 'tests/1614256626_python_logo.jpg')))
     browser.element("[id = submit]").submit()
 
 
