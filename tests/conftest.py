@@ -12,3 +12,5 @@ def open_browser():
     browser.quit()
     print("Тренажер закрыт")
 
+
+
