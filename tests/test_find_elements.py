@@ -21,6 +21,18 @@ def test_send_document(open_browser):
     browser.element('[id="react-select-4-input"]').type("Noida").press_enter()
     browser.element('#uploadPicture').set_value(os.path.abspath(os.path.join(os.path.dirname(__file__), os.path.pardir, 'tests/1614256626_python_logo.jpg')))
     browser.element("[id = submit]").submit()
+    browser.element('[class="table table-dark table-striped table-bordered table-hover"]').should(have.text(
+        "Max Muradov" and
+        "koreantech620@mail.ru" and
+        "Male" and
+        "0790345439" and
+        "24 April,2000" and
+        "Hindi" and
+        "Sports" and
+        "1614256626_python_logo.jpg" and
+        "Grrenwich Time" and
+        "NCR Noida"
+    ))
 
 
 
